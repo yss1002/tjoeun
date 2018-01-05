@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>login form</title>
+    <!-- iconfont -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/loginform.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+     <!-- 로그인폼의 로그인 버튼을 눌렀을 때 -->
+     <script>
+       $(function(){
+         $('#btn-login').click(function(){
+           $('#id').val('');
+           $('#password').val('');
+           $('.login-form').fadeIn();
+         })
+     //아이디, 패스워드 입력창에 포커스가 발생했을 때
+         $('#id, #password').focus(function(){
+           $(this).prev('label').addClass('change');
+         })
+         $('#id, #password').focusout(function(){
+           $(this).prev('label').removeClass('change');
+         })
+     //아이디, 패스워드 값을 입력했을 때
+         $('#id, #password').keyup(function(){// console.log('입력');
+           var length=$(this).val().length;
+           console.log(length);
+           //입력된 값이 있을 경우 메세지 제거
+           if(length!=0){
+           $(this).next('.message').hide();
+           //remove()제거, hide()숨김
+           }
+         })
+     //로그인 폼의 로그인 버튼을 눌렀을 때
+         $('#btn-submit').click(function(){ //.message 클래스가 적용된 요소가 있다면 삭제
+           $('.message').remove(); //아이디와 패스워드 값을 변수에 저장
+           var id=$('#id').val();
+           var password=$('#password').val();
+     //아이디와 패스워드의 값이 빈 값일 경우 체크
+         if(id==''){//아이디가 빈 값
+           $('#id').after('<p class="message">아이디 값을 입력하세요.</p>');
+           $('#id').focus();//아이디를 입력할 수 있도록 포커스 이동
+         }else if(password==''){//패스워드가 빈 값
+           $('#password').after('<p class="message">비밀번호 값을 입력하세요.</p>');
+           $('#password').focus();
+         }else{//둘다 값이 있으면
+           $('#btn-login').hide();//로그인버튼은 숨기기
+           $('.login-form').fadeOut(1000, function(){
+             $('.user-info').find('b').text(id);//로그인한 id값을 b요소에 저장
+             $('.user-info').show();//로그인 정보를 보여줌
+           })
+         }
+         })
+
+      //로그아웃 버튼 누르기
+         $('#btn-logout').click(function(){
+           $('.user-info').hide();
+           $('#btn-login').show();
+         })
+
+       })
+
+      </script>
+  </head>
+  <body>
+    <!-- 로그인을 하기 위한 버튼/로그인을 했을 때 정보 -->
+    <div class="center">
+      <button id="btn-login">login</button>
+      <div class="user-info">
+        <span><b>홍길동</b>님 반갑습니다.</span>
+        <button id="btn-logout">logout</button>
+      </div>
+    </div>
+
+    <!-- login-form -->
+    <div class="login-form">
+      <h1>LOGIN</h1>
+      <form action="">
+        <label for="id"></label>
+        <input type="text" placeholder="아이디" id="id">
+        <label for="password"></label>
+        <input type="password" placeholder="비밀번호" id="password">
+        <button id="btn-submit" type="button">login</button>
+        <p class="find-info">정보를 잊으셨나요?
+          <a href="#">아이디찾기</a> |
+          <a href="#">비밀번호찾기</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/* reset, common */
+*{margin: 0; padding: 0;}
+body{background: #43455b; font-family: sans-serif;}
+
+/* 로그인, 로그인정보 및 고르가웃 */
+.center{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  min-width: 350px; /* 최소 넓이 350 */
+}
+#btn-login, #btn-logout{
+  width: 100px; height: 40px;
+  border: 1px solid #fff;
+  font-size: 1.2em;
+  background: none;
+  color: #fff;
+}
+.user-info{display: none;}
+.user-info b{color: #fff; padding-right: 5px;}
+
+/* 로그인폼 */
+.login-form{
+  display: none;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+}
+.login-form h1{
+  text-align: center;
+  color: #f1ebe5;
+  font-size: 3em;
+  letter-spacing: 4px; /* 글자간격 */
+  padding-bottom: 20px;
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2), 0 -2px 1px #fff;
+}
+form{
+  background: #fff;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+form label{
+  position: absolute;
+}
+form label::before{
+  display: inline-block;
+  width: 46px; height: 46px;
+  line-height: 46px;
+  font-family: FontAwesome;
+  font-size: 25px; /* 사이즈를 기입해야 아이콘 출력됨 */
+}
+/* focus가 발생되었을 때 아이콘 색상 변경 */
+form label.change::before{color: #fff;}
+form label[for=id]::before{content: "\f007";}
+form label[for=password]::before{content: "\f023";}
+form input{
+  background: #f2f2f2;
+  width: 100%;
+  height: 46px;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 0 10px 0 46px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+form input:focus{
+  background: #000;
+  color: #fff;
+}
+form input:focus::-webkit-input-placeholder{}
+form button{
+  background: #6f96e8;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 1s;
+}
+form button:hover{background: #0e4071;}
+form .find-info{
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+form .find-info a{color: #0e4071; text-decoration: none;}
+form. .message{
+  color: #f00;
+  font-size: 12px;
+  padding-bottom: 15px;
+}
