@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더조은카페</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/fontello-codes.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/tjoeuncafe.css">
+
+    <!-- script -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/tjoeuncafe.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB18ZefbOWSZw-nmiRB1N9t0Oje6ZF-dZw&callback=initMap" async defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="center">
+        <h1><img src="images/logo.png" alt="tjoeuncafe logo"></h1>
+        <!-- 로그인 -->
+        <button id="btn-login" class="icon icon-login"><span class="skip">로그인</span></button>
+        <nav>
+          <div class="logout-form">
+            <b>홍길동</b>님 안녕하세요.
+            <button id="btn-logout" class="icon icon-logout"><span class="skip">로그아웃</span></button>
+          </div>
+          <!-- 통합검색 -->
+          <button id="btn-search-open" class="icon icon-search"><span class="skip">통합검색창열기</span></button>
+          <form action="#" class="search-form">
+            <input type="text" id="total-search" placeholder="검색어를 입력하세요.">
+            <button id="btn-search" class="icon icon-search"><span class="skip">통합검색</span></button>
+          </form>
+
+          <!-- 네비게이션 -->
+          <button id="btn-menu" class="icon icon-menu"><span class="skip">토글메뉴</span></button>
+          <!-- ul>li*6>(a[href=#]>span+span[class=ko])+ul>li*2>a[href=#] -->
+          <ul class="gnb-nav">
+            <li>
+              <a href="#"><span>Menu</span><span class="ko">메뉴</span></a>
+              <ul>
+                <li><a href="#">음료</a></li>
+                <li><a href="#">상품</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>Membership</span><span class="ko">멤버십</span></a>
+              <ul>
+                <li><a href="#">멤버십소개</a></li>
+                <li><a href="#">카드신청</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>Service</span><span class="ko">서비스</span></a>
+              <ul>
+                <li><a href="#">Q&A</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">이벤트</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>Store</span><span class="ko">매장</span></a>
+              <ul>
+                <li><a href="#">매장소개</a></li>
+                <li><a href="#">매장찾기</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>Order</span><span class="ko">주문</span></a>
+              <ul>
+                <li><a href="#">주문하기</a></li>
+                <li><a href="#">주문내역</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>MyInfo</span><span class="ko">내정보</span></a>
+              <ul>
+                <li><a href="#">내정보</a></li>
+                <li><a href="#">정보수정</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <section>
+      <!-- 메인슬라이드 -->
+      <article class="main-slide">
+        <div class="slide">
+          <!-- ul>li*2>div[class=center]>button{자세히보기} -->
+          <ul>
+            <li>
+              <div class="center">
+                <img src="images/main-slide1-title.png"
+                alt="더조은 카페 리뉴얼-더조은 카페 사이트가 새롭게 단장되었습니다. 리뉴얼된 더조은 카페를 만나보세요.">
+                <button>자세히보기</button>
+              </div>
+            </li>
+            <li>
+              <div class="center">
+                <span class="skip">sweet winter drinks</span>
+                <button class="btn-center">자세히보기</button>
+              </div>
+            </li>
+          </ul>
+          <button class="icon icon-left-open"><span class="skip">이전</span></button>
+          <button class="icon icon-right-open"><span class="skip">다음</span></button>
+          <div class="pagination">
+            <!-- ul>li*2>a[href=#]>span[class=skip]{$} -->
+            <ul>
+              <!-- <li class="active"><a href="#"><span class="skip">1</span></a></li>
+              <li><a href="#"><span class="skip">2</span></a></li> -->
+            </ul>
+            <button class="icon icon-pause"><span class="skip">재생/정지</span></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 음료/상품/공지사항/멤버십 -->
+      <article class="contents">
+        <div class="center">
+          <div class="drink">
+            <a href="#"><span>음료</span></a>
+          </div>
+          <div class="product">
+            <a href="#"><span>상품</span></a>
+          </div>
+          <div class="wrap">
+            <div class="notice">
+              <h1>공지사항</h1>
+              <!-- ul>li*3>a[href=#]+span{18.01.} -->
+              <ul>
+                <li><a href="#">멤버십에 가입하세요.</a><span>18.01.20</span></li>
+                <li><a href="#">신메뉴가 출시되었습니다.</a><span>18.01.19</span></li>
+                <li><a href="#">더조은카페가 리뉴얼되었습니다.</a><span>18.01.18</span></li>
+              </ul>
+              <button class="icon icon-plus"><span class="skip">더보기</span></button>
+            </div>
+            <div class="membership">
+              <h1>멤버십</h1>
+              <p>멤버십에 가입하고 특별한 혜택을 누리세요.</p>
+              <div class="swiper-container membership-slide">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><i class="sprite s-stamp"></i><span>스탬프적립</span></div>
+                  <div class="swiper-slide"><i class="sprite s-coupon"></i><span>쿠폰사용</span></div>
+                  <div class="swiper-slide"><i class="sprite s-gift"></i><span>선물하기</span></div>
+                  <div class="swiper-slide"><i class="sprite s-mymenu"></i><span>나만의메뉴</span></div>
+                  <div class="swiper-slide"><i class="sprite s-smartpay"></i><span>스마트결제</span></div>
+                  <div class="swiper-slide"><i class="sprite s-alarm"></i><span>이벤트알림</span></div>
+                </div>
+                <div class="swiper-button-next icon icon-right-open"><span class="skip">다음</span></div>
+                <div class="swiper-button-prev icon icon-left-open"><span class="skip">이전</span></div>
+              </div>
+              <button class="icon icon-plus"><span class="skip">더보기</span></button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 매장검색 -->
+      <article class="store">
+        <div class="center">
+          <h1>매장찾기</h1>
+          <div class="wrap">
+            <div class="left">
+              <form action="#">
+                <input type="text" id="store-search" placeholder="찾으시는 지역을 입력해주세요.">
+                <button id="btn-store-search" class="icon icon-search"><span class="skip">매장검색</span></button>
+              </form>
+              <p class="text-right">
+                전체 매장수 <span class="total-number">80</span>개 /
+                검색 <span class="search-number">10</span>개
+              </p>
+              <!-- ul>li*10>b{신촌 $호점}+span{서울 서대문구 신촌로$}+i[class="icon icon-right-open"] -->
+              <ul class="store-select">
+                <li class="active"><b>신촌 1호점</b><span>서울 서대문구 신촌로1</span><i class="icon icon-right-open"></i></li>
+                <li><b>신촌 2호점</b><span>서울 서대문구 신촌로2</span><i class="icon icon-right-open"></i></li>
+                <li><b>신촌 3호점</b><span>서울 서대문구 신촌로3</span><i class="icon icon-right-open"></i></li>
+                <li><b>신촌 4호점</b><span>서울 서대문구 신촌로4</span><i class="icon icon-right-open"></i></li>
+                <li><b>신촌 5호점</b><span>서울 서대문구 신촌로5</span><i class="icon icon-right-open"></i></li>
+                <li><b>신촌 6호점</b><span>서울 서대문구 신촌로6</span><i class="icon icon-right-open"></i></li>
+                <li><b>신촌 7호점</b><span>서울 서대문구 신촌로7</span><i class="icon icon-right-open"></i></li>
+                <li><b>신촌 8호점</b><span>서울 서대문구 신촌로8</span><i class="icon icon-right-open"></i></li>
+                <li><b>신촌 9호점</b><span>서울 서대문구 신촌로9</span><i class="icon icon-right-open"></i></li>
+                <li><b>신촌 10호점</b><span>서울 서대문구 신촌로10</span><i class="icon icon-right-open"></i></li>
+              </ul>
+              <p class="info">* 매장을 선택하시면 오른쪽에 지도가 표시됩니다.</p>
+            </div>
+            <span class="icon icon-right-open"></span>
+            <div class="right">
+              <div id="map"></div>
+              <p class="info">* 마커를 누르시면 매장상세정보를 볼 수 있습니다.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- SNS/이벤트 -->
+      <article class="sns-event">
+        <div class="center">
+          <h1>SNS / 이벤트</h1>
+          <!-- ul>li*5>a[href=#]>img[src=images/sns$.png] -->
+          <ul class="sns">
+            <li><a href="#"><img src="images/sns1.png" alt="sns이미지"></a></li>
+            <li><a href="#"><img src="images/sns2.png" alt="sns이미지"></a></li>
+            <li><a href="#"><img src="images/sns3.png" alt="sns이미지"></a></li>
+            <li><a href="#"><img src="images/sns4.png" alt="sns이미지"></a></li>
+            <li><a href="#"><img src="images/sns5.png" alt="sns이미지"></a></li>
+            <li><a href="#"><img src="images/sns1.png" alt="sns이미지"></a></li>
+            <li><a href="#"><img src="images/sns2.png" alt="sns이미지"></a></li>
+            <li><a href="#"><img src="images/sns3.png" alt="sns이미지"></a></li>
+            <li><a href="#"><img src="images/sns4.png" alt="sns이미지"></a></li>
+            <li><a href="#"><img src="images/sns5.png" alt="sns이미지"></a></li>
+          </ul>
+        </div>
+        <!-- 이벤트 -->
+        <div class="event">
+          <div class="swiper-container event-slide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">
+                  <span class="skip">더조은 카페 신한카드 결제시 오늘의 커피 50%할인 2018.01.01~2018.01.30</span>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <span class="skip">비오는날은 모든 음료 1+1</span>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-button-next icon icon-right-open"><span class="skip">다음</span></div>
+            <div class="swiper-button-prev icon icon-left-open"><span class="skip">이전</span></div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- section end -->
+
+    <footer>
+      <div class="center">
+        <h1><a href="#">사이트정보<i class="icon icon-down-open"></i></a></h1>
+        <ul class="sub-nav">
+          <li><a href="#">더조은카페</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보취급방침</a></li>
+          <li><a href="#">사이트맵</a></li>
+        </ul>
+        <!-- ul>li*3>button[class="icon icon-"]>span[class=skip] -->
+        <ul class="sns">
+          <li><button class="icon icon-facebook"><span class="skip">페이스북</span></button></li>
+          <li><button class="icon icon-twitter"><span class="skip">트위터</span></button></li>
+          <li><button class="icon icon-youtube-play"><span class="skip">유투브</span></button></li>
+        </ul>
+        <p>신촌캠퍼스 서울특별시 서대문구 신촌로 119(창천동) 신영스카이텔 2,3층<br>
+          T 02-313-1132 / F 070-8622-5523 / 사업자등록번호 677-85-00578
+        </p>
+        <small>copyright&copy; tjoeun. All right reservd.</small>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- popup -->
+    <div class="popup popup-login">
+      <button class="icon icon-cancel"><span class="skip">닫기</span></button>
+      <div class="popup-body">
+        <h1><img src="images/logo.png" alt="tjoeuncafe logo"></h1>
+        <form action="#">
+          <label for="id" class="icon icon-user"><span class="skip">아이디</span></label>
+          <input type="text" placeholder="아이디" id="id">
+          <p class="message">아이디값을 입력하세요.</p>
+          <label for="password" class="icon icon-lock"><span class="skip">비밀번호</span></label>
+          <input type="password" placeholder="비밀번호" id="password">
+          <p class="message">비밀번호를 입력하세요.</p>
+          <button id="btn-login">로그인</button>
+          <button id="btn-sign">회원가입</button>
+        </form>
+        <a href="#">아이디찾기</a><a href="#">비밀번호찾기</a>
+        <div class="sns-login">
+          <p>아래계정으로 로그인</p>
+          <!-- ul>li*3>a[href=#]>span[class=skip] -->
+          <ul>
+            <li><a href="#" class="sprite s-facebook"><span class="skip">페이스북</span></a></li>
+            <li><a href="#" class="sprite s-kakao"><span class="skip">카카오톡</span></a></li>
+            <li><a href="#" class="sprite s-naver"><span class="skip">네이버</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 매장상세팝업 -->
+    <div class="popup popup-store">
+      <button class="icon icon-cancel"><span class="skip">닫기</span></button>
+      <div class="popup-header">
+        <h1>매장이름</h1>
+      </div>
+      <div class="popup-body">
+        <div class="wrap">
+          <div class="swiper-container store-slide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/store1.jpg" alt="매장사진">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/store2.jpg" alt="매장사진">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/store3.jpg" alt="매장사진">
+              </div>
+            </div>
+            <div class="swiper-button-next icon icon-right-open"><span class="skip">다음</span></div>
+            <div class="swiper-button-prev icon icon-left-open"><span class="skip">이전</span></div>
+          </div>
+          <div class="store-info">
+            <dl>
+              <dt>매장주소</dt>
+              <dd>서울 서대문구 신촌로1</dd>
+              <dt>영업시간</dt>
+              <dd>10:00~23:00 <p>주말 및 공휴일에는 변경될 수 있음.</p></dd>
+              <dt>전화번호</dt>
+              <dd>02-1234-1234</dd>
+              <dt>주차정보</dt>
+              <dd>1시간 무료 주차</dd>
+            </dl>
+            <dl>
+              <dt>오시는길</dt>
+              <dd>지하철 2호선 3번출구에서 100m직진</dd>
+            </dl>
+          </div>
+          <ul class="service-icon">
+            <li><i class="sprite s-wifi"></i><span class="skip">wifi</span></li>
+            <li><i class="sprite s-dt"></i><span class="skip">DT</span></li>
+            <li><i class="sprite s-food"></i><span class="skip">식사</span></li>
+          </ul>
+          <button class="service-open">서비스아이콘 설명보기 <i class="icon icon-down-open"></i></button>
+        </div>
+        <ul class="service-icon-total">
+          <li><i class="sprite s-wifi"></i><span>wifi</span></li>
+          <li><i class="sprite s-dt"></i><span>DT</span></li>
+          <li><i class="sprite s-food"></i><span>식사</span></li>
+          <li><i class="sprite s-outlet"></i><span>콘센트</span></li>
+          <li><i class="sprite s-parking"></i><span>주차</span></li>
+          <li><i class="sprite s-smoking"></i><span>흡연시설</span></li>
+          <li><i class="sprite s-24"></i><span>24시</span></li>
+          <li><i class="sprite s-terrace"></i><span>테라스</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>
