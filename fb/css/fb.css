@@ -100,13 +100,13 @@ footer h1{color: #fff; text-align: center; padding-top: 400px;}
 .popup-login{display: none; position: fixed; left: 50%; margin-left: 125px; width: 300px; height: 410px; background: #fff; border: 1px solid #ccc; z-index: 100;}
 .popup-login .icon-cancel{font-size: 1.5em; right: 0; position: absolute; z-index: 99999;}
 .popup-in h2{font-size: 13px; color: #ccc; top: 10px; position: relative; left: 10px; padding-bottom: 10px;}
-.popup-in .login-form p{position: relative; margin-top: 15px; font-size: 12px; font-weight: bold; left: 10px;}
-.popup-in .login-form .id input{left: 10px; position: relative; height: 30px; width: 280px; margin-top: 10px;}
-.popup-in .login-form .password input{left: 10px; position: relative; height: 30px; width: 280px; margin-top: 10px;}
+.popup-in .login-form label{position: relative; margin-top: 15px; font-size: 12px; font-weight: bold; left: 10px;}
+.popup-in .login-form .id input{left: 10px; position: relative; height: 30px; width: 280px; margin-top: 5px;}
+.popup-in .login-form .password input{left: 10px; position: relative; height: 30px; width: 280px; margin-top: 5px;}
 .popup-in .login-detail input{top: 15px; position: relative; left: 10px; float: left;}
-.popup-in .login-detail p{font-size: 10px; position: absolute; margin-left: 20px;}
+.popup-in .login-detail p{font-size: 10px; position: absolute; margin-left: 30px; top: 190px;}
 .popup-in .login-detail p > a{position: relative; top: 30px;}
-.popup-in .login-form .inline-pw{top: 200px; position: absolute;}
+.popup-in .login-form .inline-pw{top: 50px; position: relative;}
 .popup-in .login-btn .btn-b{height: 40px; width: 280px; background: #000; border-radius: 10px; color: #fff; font-size: 13px; top: 70px; position: relative;}
 .popup-in .login-btn p{width: 280px; height: 1px; background: #000; margin-left: 10px; position: relative; top: 80px;}
 .popup-in .login-btn .btn-w{height: 40px; width: 280px; background: #fff; border: 1px solid #333; border-radius: 10px; color: #000; font-size: 13px; top: 90px; position: relative;}
