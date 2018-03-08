@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+header .center h1{position: relative; text-align: center; top: 50px;}
+header #btn-in{font-size: 11px; position: absolute; right: 0; top: 0;}
+header #btn-in button{margin: 10px;}
+
+nav #btn-search{position: absolute; right: 0; top: 140px;}
+header form.search-form{position: absolute; right: 0; top: 130px; z-index: -1;}
+header form.search-form input{width: 200px; height: 30px; border-bottom: 1px solid #333;
+box-sizing: border-box; border-top: 0; border-left: 0; border-right: 0;}
+
+
+.carousel-control {background: none !important; filter: none !important; progid:none !important;}
+
+/* 네비게이션 */
+header{width: 100%; border-bottom: 1px solid #333;}
+header nav{height: 120px;}
+/* 드롭다운 */
+header nav .gnb-nav:hover > li ul,
+header nav .gnb-nav.active > li ul{display: block; opacity: 1;}
+header nav .gnb-nav:hover .nav-bg,
+header nav .gnb-nav.active .nav-bg{display: block; opacity: 1;}
+/* 1depth */
+header nav .gnb-nav{position: absolute; left: 50%; top: 130px; transform: translateX(-50%); z-index: 1; width: 630px;}
+header nav .gnb-nav li{font-weight: bold;}
+header nav .gnb-nav > li{position: relative; float: left; font-size: 12px;}
+header nav .gnb-nav > li > a{display: block; position: relative; font-size:18px; color:#333; height: 40px; line-height: 40px;
+text-align: center;}
+header nav .gnb-nav > li > a > span{padding: 50px;}
+/* 2depth */
+header nav .gnb-nav li ul{
+  display: none;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  background: #fff;
+  font-size: 14px;
+}
+header nav .gnb-nav li ul li a .small{font-size: 9px;}
+header .center .gnb-nav .nav-bg{
+  display: none;
+  background: #fff;
+  width: 2000px; height: 200px;
+  border-bottom: 2px solid #000;
+  left: -100%;
+  position: absolute;
+  margin-top: 50px;
+}
+header .center .gnb-nav li ul li{padding-bottom: 5px;}
+header .center .gnb-nav li ul li a{color: #000; font-size: 12px;}
+header .center .gnb-nav li ul.width{}
+
+.main ul{padding-top: 100px;}
+.main .center{text-align: center;}
+.main .center .btn-main{font-size: 12px; position: relative; bottom: 50px; transform: translateX(30%);}
+.main .center .btn-woman, .main .center .btn-man, .main .center .btn-kids{color: #fff; padding: 10px; text-decoration-line: underline;}
+
+.product{height: 500px; border-bottom: #ccc solid 1px;}
+.product .center h1{margin-top: 100px; margin-bottom: 20px; text-align: center; font-size: 20px;}
+.product .center ul > li{float: left;}
+.product .center .wrap2, .product .center .wrap3, .product .center .wrap4{padding-left: 33px;}
+.product .center .contents{padding-top: 20px; font-size: 12px; font-weight: bold; text-align: center;}
+.product .center .wrap1 .icon-heart-empty{font-size: 1.5em; position: absolute; top: 370px; left: 220px;}
+.product .center .wrap2 .icon-heart-empty{font-size: 1.5em; position: absolute; top: 370px; left: 505px;}
+.product .center .wrap3 .icon-heart-empty{font-size: 1.5em; position: absolute; top: 370px; left: 790px;}
+.product .center .wrap4 .icon-heart-empty{font-size: 1.5em; position: absolute; top: 370px; left: 1075px;}
+
+.app-letter{position: relative; top: 100px;}
+.app-letter .app img{float: left;}
+.app-letter .app button{position: absolute; width: 100px; height: 40px; background: #000; color: #fff; bottom: 50px; left: 200px;}
+
+.app-letter .letter img{margin-left: 100px;}
+.app-letter span{font-size: 13px; font-weight: bold; position: absolute; text-align: center; top: 340px; right: 160px;}
+.app-letter .letter button{font-size: 13px; font-weight: bold; right: 210px; position: absolute; bottom: 50px; text-decoration: underline;}
+
+.magazine{height: 550px; background: #333; top: 160px; position: relative;}
+.magazine h1{padding-top: 50px; color: #fff; font-size: 40px; text-align: center;}
+.magazine .center .wrap-m{padding-top: 50px;}
+.magazine .center .wrap-m ul{float: left;}
+.magazine .center .m2, .magazine .center .m3{padding-left: 93px;}
+.magazine .center .magazine-detail{text-align: center; color: #fff;}
+.magazine .center .magazine-detail a{margin-top: 20px; color: #fff; font-size: 12px; font-weight: bold;}
+.magazine .center .magazine-detail button{padding-top: 60px; font-size: 12px; text-decoration: underline;}
+
+
+footer{padding-top: 160px; background: #000; height: 650px;}
+footer .center .sub-nav{position: absolute; padding-top: 30px; text-align: center; left: 50%; transform: translateX(-50%); width: 850px;}
+footer .center .sub-nav #first{color: #fff; font-size: 13px; font-weight: bold; padding-bottom: 5px;}
+footer .center .sub-nav a{font-size: 12px; color: #fff;}
+footer .category{float: left; padding: 0 320px 0 0;}
+footer .info{float: left; padding: 0 320px 0 0;}
+footer .newsletter{float: left;}
+footer .newsletter button{width: 60px; height: 20px; background: #fff; font-size: 11px; font-weight: 900;}
+footer .sns{color: #fff; font-size: 1.5em; margin-top: 200px; position: absolute; left: 50%; transform: translateX(-50%);}
+footer .sns li{float: left; padding: 0 30px;}
+footer small{position: absolute; text-align: center; margin-top: 300px; color: #fff; font-size: 10px; left: 50%;transform: translateX(-50%);}
+footer h1{color: #fff; text-align: center; padding-top: 400px;}
+
+/* 로그인 회원가입 */
+.popup-login{display: none; position: fixed; left: 50%; margin-left: 125px; width: 300px; height: 410px; background: #fff; border: 1px solid #ccc; z-index: 100;}
+.popup-login .icon-cancel{font-size: 1.5em; right: 0; position: absolute; z-index: 99999;}
+.popup-in h2{font-size: 13px; color: #ccc; top: 10px; position: relative; left: 10px; padding-bottom: 10px;}
+.popup-in .login-form p{position: relative; margin-top: 15px; font-size: 12px; font-weight: bold; left: 10px;}
+.popup-in .login-form .id input{left: 10px; position: relative; height: 30px; width: 280px; margin-top: 10px;}
+.popup-in .login-form .password input{left: 10px; position: relative; height: 30px; width: 280px; margin-top: 10px;}
+.popup-in .login-detail input{top: 15px; position: relative; left: 10px; float: left;}
+.popup-in .login-detail p{font-size: 10px; position: absolute; margin-left: 20px;}
+.popup-in .login-detail p > a{position: relative; top: 30px;}
+.popup-in .login-form .inline-pw{top: 200px; position: absolute;}
+.popup-in .login-btn .btn-b{height: 40px; width: 280px; background: #000; border-radius: 10px; color: #fff; font-size: 13px; top: 70px; position: relative;}
+.popup-in .login-btn p{width: 280px; height: 1px; background: #000; margin-left: 10px; position: relative; top: 80px;}
+.popup-in .login-btn .btn-w{height: 40px; width: 280px; background: #fff; border: 1px solid #333; border-radius: 10px; color: #000; font-size: 13px; top: 90px; position: relative;}
