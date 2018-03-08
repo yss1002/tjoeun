@@ -10,7 +10,7 @@ header form.search-form input{width: 200px; height: 30px; border-bottom: 1px sol
 box-sizing: border-box; border-top: 0; border-left: 0; border-right: 0;}
 
 
-.carousel-control {background: none !important; filter: none !important; progid:none !important;}
+.carousel-control {background: none !important; filter: none !important;}
 
 /* 네비게이션 */
 header{width: 100%; border-bottom: 1px solid #333;}
