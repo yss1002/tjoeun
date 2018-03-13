@@ -4,13 +4,11 @@ header .center h1{position: relative; text-align: center; top: 50px;}
 header #btn-in{font-size: 11px; position: absolute; right: 0; top: 0;}
 header #btn-in button{margin: 10px;}
 
-nav #btn-search{position: absolute; right: 0; top: 140px;}
-header form.search-form{position: absolute; right: 0; top: 130px; z-index: -1;}
-header form.search-form input{width: 200px; height: 30px; border-bottom: 1px solid #333;
-box-sizing: border-box; border-top: 0; border-left: 0; border-right: 0;}
+nav #btn-search{position: absolute; right: 5px; top: 140px;}
+nav .search-form{position: absolute; right: 20px; top: 140px; z-index: 0; font-size: 12px; border-bottom: 1px solid #333;}
+nav .search-form #search{border: none; outline: none;}
 
-
-.carousel-control {background: none !important; filter: none !important;}
+.carousel-control {background: none !important; filter: none !important; progid:none !important;}
 
 /* 네비게이션 */
 header{width: 100%; border-bottom: 1px solid #333;}
@@ -24,8 +22,7 @@ header nav .gnb-nav.active .nav-bg{display: block; opacity: 1;}
 header nav .gnb-nav{position: absolute; left: 50%; top: 130px; transform: translateX(-50%); z-index: 1; width: 630px;}
 header nav .gnb-nav li{font-weight: bold;}
 header nav .gnb-nav > li{position: relative; float: left; font-size: 12px;}
-header nav .gnb-nav > li > a{display: block; position: relative; font-size:18px; color:#333; height: 40px; line-height: 40px;
-text-align: center;}
+header nav .gnb-nav > li > a{display: block; position: relative; font-size:18px; color:#333; height: 40px; line-height: 40px; text-align: center;}
 header nav .gnb-nav > li > a > span{padding: 50px;}
 /* 2depth */
 header nav .gnb-nav li ul{
@@ -35,16 +32,14 @@ header nav .gnb-nav li ul{
   width: 100%;
   background: #fff;
   font-size: 14px;
+  z-index: 2;
 }
 header nav .gnb-nav li ul li a .small{font-size: 9px;}
-header .center .gnb-nav .nav-bg{
-  display: none;
-  background: #fff;
+header .center .nav-bg{
+  display: none; background: #fff;
   width: 2000px; height: 200px;
   border-bottom: 2px solid #000;
-  left: -100%;
-  position: absolute;
-  margin-top: 50px;
+  left: -100%; position: absolute; margin-top: 50px; z-index: 1;
 }
 header .center .gnb-nav li ul li{padding-bottom: 5px;}
 header .center .gnb-nav li ul li a{color: #000; font-size: 12px;}
@@ -60,10 +55,10 @@ header .center .gnb-nav li ul.width{}
 .product .center ul > li{float: left;}
 .product .center .wrap2, .product .center .wrap3, .product .center .wrap4{padding-left: 33px;}
 .product .center .contents{padding-top: 20px; font-size: 12px; font-weight: bold; text-align: center;}
-.product .center .wrap1 .icon-heart-empty{font-size: 1.5em; position: absolute; top: 370px; left: 220px;}
-.product .center .wrap2 .icon-heart-empty{font-size: 1.5em; position: absolute; top: 370px; left: 505px;}
-.product .center .wrap3 .icon-heart-empty{font-size: 1.5em; position: absolute; top: 370px; left: 790px;}
-.product .center .wrap4 .icon-heart-empty{font-size: 1.5em; position: absolute; top: 370px; left: 1075px;}
+.product .center .wrap1 .icon-heart{font-size: 1.5em; position: absolute; top: 370px; left: 220px;}
+.product .center .wrap2 .icon-heart{font-size: 1.5em; position: absolute; top: 370px; left: 505px;}
+.product .center .wrap3 .icon-heart{font-size: 1.5em; position: absolute; top: 370px; left: 790px;}
+.product .center .wrap4 .icon-heart{font-size: 1.5em; position: absolute; top: 370px; left: 1075px;}
 
 .app-letter{position: relative; top: 100px;}
 .app-letter .app img{float: left;}
@@ -83,12 +78,12 @@ header .center .gnb-nav li ul.width{}
 .magazine .center .magazine-detail button{padding-top: 60px; font-size: 12px; text-decoration: underline;}
 
 
-footer{padding-top: 160px; background: #000; height: 670px;}
+footer{padding-top: 160px; background: #000; height: 650px;}
 footer .center .sub-nav{position: absolute; padding-top: 30px; text-align: center; left: 50%; transform: translateX(-50%); width: 850px;}
 footer .center .sub-nav #first{color: #fff; font-size: 13px; font-weight: bold; padding-bottom: 5px;}
 footer .center .sub-nav a{font-size: 12px; color: #fff;}
 footer .category{float: left; padding: 0 320px 0 0;}
-footer .info{float: left; padding: 0 310px 0 0;}
+footer .info{float: left; padding: 0 320px 0 0;}
 footer .newsletter{float: left;}
 footer .newsletter button{width: 60px; height: 20px; background: #fff; font-size: 11px; font-weight: 900;}
 footer .sns{color: #fff; font-size: 1.5em; margin-top: 200px; position: absolute; left: 50%; transform: translateX(-50%);}
@@ -103,10 +98,30 @@ footer h1{color: #fff; text-align: center; padding-top: 400px;}
 .popup-in .login-form label{position: relative; margin-top: 15px; font-size: 12px; font-weight: bold; left: 10px;}
 .popup-in .login-form .id input{left: 10px; position: relative; height: 30px; width: 280px; margin-top: 5px;}
 .popup-in .login-form .password input{left: 10px; position: relative; height: 30px; width: 280px; margin-top: 5px;}
-.popup-in .login-detail input{top: 15px; position: relative; left: 10px; float: left;}
+.popup-in .login-detail input{position: relative; float: left;}
 .popup-in .login-detail p{font-size: 10px; position: absolute; margin-left: 30px; top: 190px;}
 .popup-in .login-detail p > a{position: relative; top: 30px;}
-.popup-in .login-form .inline-pw{top: 50px; position: relative;}
-.popup-in .login-btn .btn-b{height: 40px; width: 280px; background: #000; border-radius: 10px; color: #fff; font-size: 13px; top: 70px; position: relative;}
-.popup-in .login-btn p{width: 280px; height: 1px; background: #000; margin-left: 10px; position: relative; top: 80px;}
-.popup-in .login-btn .btn-w{height: 40px; width: 280px; background: #fff; border: 1px solid #333; border-radius: 10px; color: #000; font-size: 13px; top: 90px; position: relative;}
+.popup-in .login-form .inline-pw{top: 20px; left: 10px; position: relative;}
+.popup-in .login-btn{position: absolute; bottom: 10px;}
+.popup-in .login-btn .btn-b{height: 40px; width: 280px; background: #000; border-radius: 10px; color: #fff; font-size: 13px; position: relative;}
+.popup-in .login-btn p{width: 280px; height: 1px; background: #000; margin-left: 10px; position: relative;}
+.popup-in .login-btn .btn-w{height: 40px; width: 280px; background: #fff; border: 1px solid #333; border-radius: 10px; color: #000; font-size: 13px; position: relative;}
+
+/* 쇼핑백 */
+.popup-shop{display: none; position: fixed; left: 50%; margin-left: 210px; width: 330px; height: 550px; background: #fff; border: 1px solid #ccc; z-index: 100;}
+.popup-shop .icon-cancel{font-size: 1.5em; right: 0; position: absolute; z-index: 99999;}
+.popup-shop .bag{position: relative; border-bottom:1px solid #999; padding: 10px;}
+.popup-shop .bag .img-wrap{position: absolute; width: 80px; height: 120px; border:1px solid #999; background: #999;}
+.popup-shop .bag img{max-width: 100%;}
+.popup-shop .bag dl{padding-left: 100px; font-size: 12px; line-height: 20px;}
+.popup-shop .bag dt{font-size: 14px; font-weight: 900;}
+.popup-shop .bag dd{font-size: 12px; font-weight: bold;}
+.popup-shop .bag dd:nth-of-type(1){font-size: 14px; font-weight: 900;}
+.popup-shop .pay{padding: 20px;}
+.popup-shop .pay ul{}
+.popup-shop .pay .total{font-size: 14px; font-weight: bold; border-top: 1px solid #999; margin-top: 20px;}
+.popup-shop .pay ul li{position: relative; line-height: 20px; font-size: 12px; font-weight: bold;}
+.popup-shop .pay ul li .title{}
+.popup-shop .pay ul li .price{position: absolute; right: 0;}
+.popup-shop .p{width: 260px; height: 40px; background: #000; color: #fff; border-radius: 10px;  position: relative; top: 20px; font-size: 16px;}
+.popup-shop .s{width: 260px; height: 40px; background: #fff; color: #000; border: 1px solid #000; border-radius: 10px; position: relative; top: 20px; font-size: 16px;}
